@@ -110,6 +110,17 @@ pre {
     content: " ";
     position: absolute;
     border-radius: 50%;
+    background: #ff5f56;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 12px;
+    margin-top: 12px;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    /* content: " ";
+    position: absolute;
+    border-radius: 50%;
     background: #009ede;
     width: 12px;
     height: 12px;
@@ -117,7 +128,7 @@ pre {
     left: 12px;
     margin-top: 12px;
     -webkit-box-shadow: 20px 0 #2eb2ff, 40px 0 #277bc9;
-    box-shadow: 20px 0 #2e89ff, 40px 0 #2773c9;
+    box-shadow: 20px 0 #2e89ff, 40px 0 #2773c9; */
 }
 
 code {

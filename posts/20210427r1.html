@@ -366,14 +366,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.1k
+                    5.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    23 分
+                    25 分
                 </div>
                 
 
@@ -462,14 +462,16 @@ v14.16.1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <span class="token function">npm</span> i hexo-permalink-pinyin --save
 <span class="token function">npm</span> i --save hexo-wordcount
 <span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save
-<span class="token function">npm</span> <span class="token function">install</span> hexo-filter-github-emojis --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">npm</span> <span class="token function">install</span> hexo-filter-github-emojis --save
+<span class="token function">npm</span> <span class="token function">install</span> hexo-abbrlink --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ol>
 <li>搜索功能；</li>
 <li>中文链接转拼音；</li>
 <li>文章字数统计；</li>
 <li>RSS订阅；</li>
-<li>Github emojis表情</li>
+<li>Github emojis表情；</li>
+<li>abbrlink永久唯一链接；</li>
 </ol>
 <p>如果之前安装过prismjs，则需要卸载<code>npm uninstall hexo-prism-plugin</code></p>
 <h3 id="5、在Hexo初始化生成的文件夹中新增一些文件"><a href="#5、在Hexo初始化生成的文件夹中新增一些文件" class="headerlink" title="5、在Hexo初始化生成的文件夹中新增一些文件"></a>5、在Hexo初始化生成的文件夹中新增一些文件</h3><blockquote>
@@ -490,7 +492,7 @@ hexo new page <span class="token number">404</span><span aria-hidden="true" clas
 <li>新增友情链接页；</li>
 <li>新增404页；</li>
 </ol>
-<p>会在source目录下生成对影的文件夹及index.md文件</p>
+<p>会在source目录下生成对应的文件夹及index.md文件</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">huyf@T450s:~/work/blog/source$ tree  -L <span class="token number">2</span>
 <span class="token builtin class-name">.</span>
 ├── <span class="token number">404</span>
@@ -530,17 +532,74 @@ timezone: 'Asia/Shanghai' #时区<span aria-hidden="true" class="line-numbers-ro
 <h4 id="1-2-URL-网页链接"><a href="#1-2-URL-网页链接" class="headerlink" title="1.2 URL 网页链接"></a>1.2 URL 网页链接</h4><pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"># URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 #url: http:：//example.com
-url: http://doghoo.github.io #改成你自己的网站地址
+url: http://doghoo.github.io
 # permalink: :year/:month/:day/:title/
+#设置永久链接
+# permalink: posts/:uuid  # 此处可以自己设置，也可以直接使用 :/abbrlink
 permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink
+abbrlink:
+  auto_category: 
+    enable: true
+  alg: crc32   #算法： crc16(default) and crc32
+  rep: hex     #进制： dec(default) and hex
 
+#add v7.8.0
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>url是需要改成你自己的网站地址</p>
+<p>不过我的blog做上面设置后，一开始是能正常生成abbrlink，但后面不知道为什么每次生成的链接都变成了undefined，后来采用如下配置方案：</p>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"># URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+#url: http:：//example.com
+url: http://doghoo.github.io
+permalink: posts/:year:month:day:id.html 
+#设置永久链接
+# permalink: posts/:uuid  # 此处可以自己设置，也可以直接使用 :/abbrlink
+
+# permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink
+# # abbrlink config
+# abbrlink:
+#   alg: crc32      #support crc16(default) and crc32
+#   rep: hex        #support dec(default) and hex
+#   drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
+#   # Generate categories from directory-tree
+#   # depth: the max_depth of directory-tree you want to generate, should &gt; 0
+#   auto_category:
+#      enable: true  #true(default)
+#      depth:        #3(default)
+#      over_write: false 
+#   auto_title: false #enable auto title, it can auto fill the title by path
+#   auto_date: false #enable auto date, it can auto fill the date by time today
+#   force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
+
+#add v7.8.0
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>还需要修改<code>scaffolds/post.md</code></p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token front-matter-block"><span class="token punctuation">---</span>
+<span class="token font-matter yaml language-yaml">title: {{ title }}
+id:
+date: {{ date }}
+author: 
+img: 
+coverImg: 
+top: false
+cover: false
+toc: true
+mathjax: false
+password:
+summary:
+tags:
+categories:</span>
+<span class="token punctuation">---</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在markdown文章中添加 id，参见下图：<br><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430081129.png"></p>
+<p>生成链接格式如图所示<br><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430081425.png"></p>
+<p>也可以保持默认配置</p>
 <h4 id="1-3-Directory"><a href="#1-3-Directory" class="headerlink" title="1.3 Directory"></a>1.3 Directory</h4><p>保持不变</p>
 <pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"># Directory
 source_dir: source
@@ -1243,7 +1302,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://doghoo.github.io/posts/undefined.html">http://doghoo.github.io/posts/undefined.html</a>
+                    <a href="http://doghoo.github.io/posts/20210427r1.html">http://doghoo.github.io/posts/20210427r1.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1463,7 +1522,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/posts/undefined.html">
+                <a href="/posts/20210427r1.html">
                     <div class="card-image">
                         
                         
@@ -1517,7 +1576,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/posts/undefined.html">
+                <a href="/posts/20210427r1.html">
                     <div class="card-image">
                         
                         
@@ -1570,6 +1629,43 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源:  Dog Hoo<br />'
+            + '文章作者: DogHoo<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
