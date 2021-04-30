@@ -6,7 +6,7 @@
   <link href="http://doghoo.github.io/atom.xml" rel="self"/>
   
   <link href="http://doghoo.github.io/"/>
-  <updated>2021-04-30T00:14:40.059Z</updated>
+  <updated>2021-04-30T02:48:32.768Z</updated>
   <id>http://doghoo.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Gitee上搭建图床</title>
+    <link href="http://doghoo.github.io/posts/3d822528.html"/>
+    <id>http://doghoo.github.io/posts/3d822528.html</id>
+    <published>2021-04-30T01:11:16.000Z</published>
+    <updated>2021-04-30T02:48:32.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Gitee上搭建图床，使用PicGo生成markdown链接&quot;&gt;&lt;a href=&quot;#Gitee上搭建图床，使用PicGo生成markdown链接&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="搭建博客" scheme="http://doghoo.github.io/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="gitee" scheme="http://doghoo.github.io/tags/gitee/"/>
+    
+    <category term="imgbed" scheme="http://doghoo.github.io/tags/imgbed/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git+Hexo 博客搭建</title>
-    <link href="http://doghoo.github.io/posts/20210427r1.html"/>
-    <id>http://doghoo.github.io/posts/20210427r1.html</id>
+    <link href="http://doghoo.github.io/posts/2324b80c.html"/>
+    <id>http://doghoo.github.io/posts/2324b80c.html</id>
     <published>2021-04-27T03:50:14.000Z</published>
-    <updated>2021-04-30T00:14:40.059Z</updated>
+    <updated>2021-04-30T01:39:54.724Z</updated>
     
     
       
