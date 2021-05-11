@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Gitee上搭建图床, 专注于C/C++, 分享知识,记录感触">
+    <meta name="keywords" content="Python Modify Word, 专注于C/C++, 分享知识,记录感触">
     <meta name="description" content="江家宅畔成花圃，东府门前作菜园。 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Gitee上搭建图床 |  Dog Hoo</title>
+    <title>Python Modify Word |  Dog Hoo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -207,12 +207,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Gitee上搭建图床</h1>
+                    <h1 class="description center-align post-title">Python Modify Word</h1>
                 </div>
             </div>
         </div>
@@ -328,12 +328,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/gitee/">
-                                <span class="chip bg-color">gitee</span>
-                            </a>
-                        
-                            <a href="/tags/imgbed/">
-                                <span class="chip bg-color">imgbed</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                     </div>
@@ -344,8 +340,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                搭建博客
+                            <a href="/categories/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -357,7 +353,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-30
+                    2021-05-11
                 </div>
                 
 
@@ -366,14 +362,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    359
+                    818
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -396,28 +392,127 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Gitee上搭建图床，使用PicGo生成markdown链接"><a href="#Gitee上搭建图床，使用PicGo生成markdown链接" class="headerlink" title="Gitee上搭建图床，使用PicGo生成markdown链接"></a>Gitee上搭建图床，使用PicGo生成markdown链接</h1><p><strong>注意</strong> 本地需要线安装好git</p>
-<h2 id="1-Gitee配置"><a href="#1-Gitee配置" class="headerlink" title="1. Gitee配置"></a>1. Gitee配置</h2><p>首先需要创建一个Gitee账号，如果没有，去<a target="_blank" rel="noopener" href="https://gitee.com/signup">注册</a>一个即可。</p>
-<h3 id="1-1-创建仓库"><a href="#1-1-创建仓库" class="headerlink" title="1.1 创建仓库"></a>1.1 创建仓库</h3><p><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430100157.png"></p>
-<p>然后，根据需要填写一下即可</p>
-<p><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430100952.png"></p>
-<h3 id="1-2-创建token"><a href="#1-2-创建token" class="headerlink" title="1.2. 创建token"></a>1.2. 创建token</h3><p><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430101558.png"></p>
-<p><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430101826.png"><br>输入gitee的密码验证<br><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430102148.png"></p>
-<p>特别注意：需要妥善保存私人令牌，复制、截图都行，实在忘记了，删掉重建即可。<br><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430102237.png"></p>
-<h2 id="2-PicGo配置"><a href="#2-PicGo配置" class="headerlink" title="2.PicGo配置"></a>2.PicGo配置</h2><h3 id="2-1-下载PicGo"><a href="#2-1-下载PicGo" class="headerlink" title="2.1 下载PicGo"></a>2.1 下载PicGo</h3><p><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">PicGo Release下载地址</a><br>建议使用最新版本的，本人是在ubuntu18.04上，下载的是<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.6/PicGo-2.3.0-beta.6.AppImage">PicGo-2.3.0-beta.6.AppImage</a></p>
-<p>注意：下载的文件需要设置权限才能运行</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://github.com/Molunerfinn/PicGo/releases/download/v2.3.0-beta.6/PicGo-2.3.0-beta.6.AppImage
+                <h1 id="使用Python批处理修改word文件"><a href="#使用Python批处理修改word文件" class="headerlink" title="使用Python批处理修改word文件"></a>使用Python批处理修改word文件</h1><blockquote>
+<p>使用zipfile库修改.docx文件，zipfile不用额外安装<br>如果需要修改.doc文件，还需要pypiwin32库，<br>说明：pypiwin32库只能在Windows下使用，因此此文历程为Windows下Python3.9</p>
+</blockquote>
+<h2 id="安装需要的库"><a href="#安装需要的库" class="headerlink" title="安装需要的库"></a>安装需要的库</h2><p><strong>Windows下安装：</strong></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> pywin32<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<span class="token function">chmod</span> <span class="token number">777</span> PicGo-2.3.0-beta.6.AppImage<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="代码范例"><a href="#代码范例" class="headerlink" title="代码范例"></a>代码范例</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># _*_coding:utf-8_*_</span>
+<span class="token comment"># 使用方法</span>
+<span class="token comment"># 安装pyhon3</span>
+<span class="token comment"># 命令行安装pywin32</span>
+<span class="token comment"># 命令：pip install pywin32</span>
 
-<h3 id="2-2-下载gitee插件"><a href="#2-2-下载gitee插件" class="headerlink" title="2.2 下载gitee插件"></a>2.2 下载gitee插件</h3><p>Gitee 不是 PicGo默认支持的图床，因此需要下载插件。<br>安装的是gitee 2.0.3, 安装这个插件之前，需要安装node.js，参考 <a href="http://doghoo.github.io/posts/2324b80c.html">Git+Hexo 博客搭建</a><br><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430103312.png"></p>
-<h3 id="2-3-配置gitee插件"><a href="#2-3-配置gitee插件" class="headerlink" title="2.3 配置gitee插件"></a>2.3 配置gitee插件</h3><p><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430103831.png"></p>
-<p>点击确定，病设置为默认图床。</p>
-<p><strong>token处填入1.2生成的私人令牌</strong></p>
-<p><strong>path可以什么都不填写。填写2021/04，上传样式如下</strong><br><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430104300.png"></p>
-<h3 id="2-4-PicGo使用"><a href="#2-4-PicGo使用" class="headerlink" title="2.4 PicGo使用"></a>2.4 PicGo使用</h3><p>点击上传，并选择图片，等待上传成功即可<br><img src="https://gitee.com/doghoo/img/raw/master/2021/04/20210430104558.png"></p>
-<p>上传成功后，点击<code>markdown</code>按钮，即可拷贝<code>markdown</code>可用的URL样例如下：<br> <code>![](https://gitee.com/doghoo/img/raw/master/2021/04/20210430104558.png)</code></p>
-<p><strong>over.</strong><br><strong>Thanks!</strong></p>
+<span class="token keyword">import</span> os<span class="token punctuation">,</span>zipfile
+<span class="token keyword">from</span> win32com <span class="token keyword">import</span> client <span class="token keyword">as</span> wc
+
+<span class="token comment">#当前目录</span>
+path<span class="token operator">=</span><span class="token string">'.\\'</span>
+
+<span class="token comment"># 文件名上面需要替换的字符串内容</span>
+<span class="token comment"># 比如文件名称为《Pojec-02-R02 设计开发计划书.docx》，想改成《XXXX-02-R02 设计开发计划书.docx》</span>
+perfix<span class="token operator">=</span><span class="token string">"Pojec-02"</span>
+<span class="token comment"># 文件名上面目标字符串内容</span>
+target<span class="token operator">=</span><span class="token string">"XXXX-02"</span> <span class="token comment"># 02指研发过程</span>
+
+<span class="token comment"># 用于保存文档内部的需要替换内容的键值对</span>
+replaceDic<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"Pojec-02"</span><span class="token punctuation">:</span><span class="token string">"XXXX-02"</span><span class="token punctuation">,</span> <span class="token comment">#替换文档中的编号</span>
+             <span class="token string">"北京xxxx有限公司"</span><span class="token punctuation">:</span><span class="token string">"上海XXXXXXX"</span><span class="token punctuation">,</span> <span class="token comment">#替换公司名称</span>
+             <span class="token string">"机密"</span><span class="token punctuation">:</span><span class="token string">""</span><span class="token punctuation">,</span> <span class="token comment">#删除机密</span>
+             <span class="token string">"秘密"</span><span class="token punctuation">:</span><span class="token string">""</span><span class="token punctuation">}</span>
+
+<span class="token comment">#遍历path目录并将docx和xlsx挑选出来修改</span>
+<span class="token keyword">def</span> <span class="token function">modifyFiles</span><span class="token punctuation">(</span>oldstr<span class="token punctuation">,</span> newstr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># fileNames =[]</span>
+    <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">file</span><span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token string">'.docx'</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token builtin">file</span><span class="token punctuation">.</span>find<span class="token punctuation">(</span>perfix<span class="token punctuation">)</span><span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span><span class="token string">'\t'</span><span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span>oldstr<span class="token punctuation">,</span>newstr<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token comment">#fileNames.append((os.path.join(path,file), os.path.join(path,file.replace(perfix,target))))</span>
+            <span class="token comment">#fileNames.append((file, file.replace(oldstr,newstr)))</span>
+            docx_replace<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span>oldstr<span class="token punctuation">,</span>newstr<span class="token punctuation">)</span><span class="token punctuation">,</span> replaceDic <span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token builtin">file</span><span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token string">'.xlsx'</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token builtin">file</span><span class="token punctuation">.</span>find<span class="token punctuation">(</span>perfix<span class="token punctuation">)</span><span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token comment">#print( os.path.join(path,file), os.path.join(path,file.replace("KTH2-02-01","ECOM-02")))</span>
+            <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span><span class="token string">'\t'</span><span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span>oldstr<span class="token punctuation">,</span>newstr<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token comment">#fileNames.append((os.path.join(path,file), os.path.join(path,file.replace(perfix,target))))</span>
+            <span class="token comment">#fileNames.append((file, file.replace(oldstr,newstr)))</span>
+            xlsx_replace<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span>oldstr<span class="token punctuation">,</span>newstr<span class="token punctuation">)</span><span class="token punctuation">,</span> replaceDic <span class="token punctuation">)</span>
+    <span class="token comment"># return fileNames</span>
+
+<span class="token comment">#替换docx中的文字，包含页眉页脚</span>
+<span class="token keyword">def</span> <span class="token function">docx_replace</span><span class="token punctuation">(</span>old_file<span class="token punctuation">,</span>new_file<span class="token punctuation">,</span>rep<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    zin <span class="token operator">=</span> zipfile<span class="token punctuation">.</span>ZipFile <span class="token punctuation">(</span>old_file<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span>
+    zout <span class="token operator">=</span> zipfile<span class="token punctuation">.</span>ZipFile <span class="token punctuation">(</span>new_file<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> zin<span class="token punctuation">.</span>infolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">buffer</span> <span class="token operator">=</span> zin<span class="token punctuation">.</span>read<span class="token punctuation">(</span>item<span class="token punctuation">.</span>filename<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>filename <span class="token operator">==</span> <span class="token string">'word/document.xml'</span> <span class="token keyword">or</span> <span class="token string">'header'</span> <span class="token keyword">in</span> item<span class="token punctuation">.</span>filename <span class="token keyword">or</span> <span class="token string">'footer'</span> <span class="token keyword">in</span> item<span class="token punctuation">.</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            res <span class="token operator">=</span> <span class="token builtin">buffer</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> r <span class="token keyword">in</span> rep<span class="token punctuation">:</span>
+                res <span class="token operator">=</span> res<span class="token punctuation">.</span>replace<span class="token punctuation">(</span>r<span class="token punctuation">,</span>rep<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token builtin">buffer</span> <span class="token operator">=</span> res<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
+        zout<span class="token punctuation">.</span>writestr<span class="token punctuation">(</span>item<span class="token punctuation">,</span> <span class="token builtin">buffer</span><span class="token punctuation">)</span>
+    zout<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    zin<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+<span class="token comment"># 替换xlsx中的文字</span>
+<span class="token keyword">def</span> <span class="token function">xlsx_replace</span><span class="token punctuation">(</span>old_file<span class="token punctuation">,</span>new_file<span class="token punctuation">,</span>rep<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    zin <span class="token operator">=</span> zipfile<span class="token punctuation">.</span>ZipFile <span class="token punctuation">(</span>old_file<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span>
+    zout <span class="token operator">=</span> zipfile<span class="token punctuation">.</span>ZipFile <span class="token punctuation">(</span>new_file<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> item <span class="token keyword">in</span> zin<span class="token punctuation">.</span>infolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">buffer</span> <span class="token operator">=</span> zin<span class="token punctuation">.</span>read<span class="token punctuation">(</span>item<span class="token punctuation">.</span>filename<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'xl/worksheets/sheet'</span> <span class="token keyword">in</span> item<span class="token punctuation">.</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            res <span class="token operator">=</span> <span class="token builtin">buffer</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> r <span class="token keyword">in</span> rep<span class="token punctuation">:</span>
+                res <span class="token operator">=</span> res<span class="token punctuation">.</span>replace<span class="token punctuation">(</span>r<span class="token punctuation">,</span>rep<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token builtin">buffer</span> <span class="token operator">=</span> res<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
+        zout<span class="token punctuation">.</span>writestr<span class="token punctuation">(</span>item<span class="token punctuation">,</span> <span class="token builtin">buffer</span><span class="token punctuation">)</span>
+    zout<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    zin<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+<span class="token comment"># 将目录下的xls文件转换成xlsxx文件</span>
+<span class="token keyword">def</span> <span class="token function">convertXlsToXlsx</span><span class="token punctuation">(</span>rawpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    excel <span class="token operator">=</span> wc<span class="token punctuation">.</span>Dispatch<span class="token punctuation">(</span><span class="token string">"Excel.Application"</span><span class="token punctuation">)</span>
+    filenamelist <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>rawpath<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>rawpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 找出文件中以.xls结尾并且不以~$开头的文件(~$是为了排除临时文件的)</span>
+        <span class="token keyword">if</span> i<span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token string">'.xls'</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token keyword">not</span> i<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">'~$'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            <span class="token comment"># try</span>
+            <span class="token comment"># 打开文件</span>
+            wb <span class="token operator">=</span> excel<span class="token punctuation">.</span>Workbooks<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>rawpath <span class="token operator">+</span> i<span class="token punctuation">)</span>
+            <span class="token comment"># # 将文件名与后缀分割</span>
+            rename <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            <span class="token comment"># 将文件另存为.xlsx</span>
+            wb<span class="token punctuation">.</span>SaveAs<span class="token punctuation">(</span>rawpath <span class="token operator">+</span> rename<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.xlsx'</span><span class="token punctuation">,</span> <span class="token number">51</span><span class="token punctuation">)</span> <span class="token comment"># 51表示xlsx格式</span>
+            wb<span class="token punctuation">.</span>Close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    excel<span class="token punctuation">.</span>Quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 将目录下的doc文件转换成docx文件</span>
+<span class="token keyword">def</span> <span class="token function">convertDocToDocx</span><span class="token punctuation">(</span>rawpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    word <span class="token operator">=</span> wc<span class="token punctuation">.</span>Dispatch<span class="token punctuation">(</span><span class="token string">"Word.Application"</span><span class="token punctuation">)</span>
+    filenamelist <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>rawpath<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>rawpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 找出文件中以.doc结尾并且不以~$开头的文件(~$是为了排除临时文件的)</span>
+        <span class="token keyword">if</span> i<span class="token punctuation">.</span>endswith<span class="token punctuation">(</span><span class="token string">'.doc'</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token keyword">not</span> i<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">'~$'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            <span class="token comment"># try</span>
+            <span class="token comment"># 打开文件</span>
+            doc <span class="token operator">=</span> word<span class="token punctuation">.</span>Documents<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>rawpath <span class="token operator">+</span> i<span class="token punctuation">)</span>
+            <span class="token comment"># # 将文件名与后缀分割</span>
+            rename <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            <span class="token comment"># 将文件另存为.docx</span>
+            doc<span class="token punctuation">.</span>SaveAs<span class="token punctuation">(</span>rawpath <span class="token operator">+</span> rename<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.docx'</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span> <span class="token comment"># 12表示docx格式</span>
+            doc<span class="token punctuation">.</span>Close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    word<span class="token punctuation">.</span>Quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#如果模板为xls文件，需要先转换程xlsx</span>
+<span class="token comment">#convertXlsToXlsx(path)</span>
+<span class="token comment">#如果模板为doc文件，需要先转换程docx</span>
+<span class="token comment">#convertDocToDocx(path)</span>
+modifyFiles<span class="token punctuation">(</span>perfix<span class="token punctuation">,</span> target<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以上可以自己修改以便于适于自己的应用场景。</p>
+<p>End.</p>
 
                 
             </div>
@@ -444,7 +539,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://doghoo.github.io/posts/3d822528.html">http://doghoo.github.io/posts/3d822528.html</a>
+                    <a href="http://doghoo.github.io/posts/f2ac8664.html">http://doghoo.github.io/posts/f2ac8664.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -482,12 +577,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/gitee/">
-                                    <span class="chip bg-color">gitee</span>
-                                </a>
-                            
-                                <a href="/tags/imgbed/">
-                                    <span class="chip bg-color">imgbed</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
                                 </a>
                             
                         </div>
@@ -659,9 +750,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/f2ac8664.html">
                     <div class="card-image">
@@ -679,9 +771,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -694,6 +786,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -712,13 +805,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/2324b80c.html">
+                <a href="/posts/3d822528.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Git+Hexo 博客搭建">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Gitee上搭建图床">
                         
-                        <span class="card-title">Git+Hexo 博客搭建</span>
+                        <span class="card-title">Gitee上搭建图床</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -729,7 +822,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-30
                             </span>
                         <span class="publish-author">
                             
@@ -746,12 +839,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/gitee/">
+                        <span class="chip bg-color">gitee</span>
                     </a>
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/imgbed/">
+                        <span class="chip bg-color">imgbed</span>
                     </a>
                     
                 </div>

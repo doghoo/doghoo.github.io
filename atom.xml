@@ -6,7 +6,7 @@
   <link href="http://doghoo.github.io/atom.xml" rel="self"/>
   
   <link href="http://doghoo.github.io/"/>
-  <updated>2021-04-30T02:48:32.768Z</updated>
+  <updated>2021-05-11T05:43:33.607Z</updated>
   <id>http://doghoo.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python Modify Word</title>
+    <link href="http://doghoo.github.io/posts/f2ac8664.html"/>
+    <id>http://doghoo.github.io/posts/f2ac8664.html</id>
+    <published>2021-05-11T00:52:59.000Z</published>
+    <updated>2021-05-11T05:43:33.607Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;使用Python批处理修改word文件&quot;&gt;&lt;a href=&quot;#使用Python批处理修改word文件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://doghoo.github.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://doghoo.github.io/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Gitee上搭建图床</title>
